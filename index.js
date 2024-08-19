@@ -434,13 +434,9 @@ console.log(sortLeaderBoardByScoreDesc(leaderBoard))
 // NOTE: ⚠️ original array shouldn't be modified. or we are missing players.
 
 function getTopFiveWorstPlayers(leaderBoard){
-    let worstFive = []
     leaderBoard.sort((a,b) => a.score - b.score)
-    for (let i = 0; i < 5; i++) {
-        worstFive.push(leaderBoard[i])
-        
-    }
-    return worstFive
+
+    return leaderBoard.slice(0,5)
 }
 console.log(getTopFiveWorstPlayers(leaderBoard))
 
