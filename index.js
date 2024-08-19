@@ -493,6 +493,11 @@ console.log(getTopFiveWorstPlayers(leaderBoard))
 
 function safeCopy(companyHierarchy){
     let clone = JSON.parse(JSON.stringify(companyHierarchy))
+    clone.departments.push({
+    name: 'Marketing',
+    head: 'Karen',
+    employees: ['Liam', 'Mia']
+    });
     return clone
 
 
